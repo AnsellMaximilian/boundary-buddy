@@ -15,6 +15,8 @@ export interface GameContextData {
   nextQuestion: () => void;
   currentChoice: number | null;
   setCurrentChoice: (index: number | null) => void;
+  gameWin: boolean;
+  setGameWin: (value: boolean) => void;
 }
 
 export const GameContext = createContext<GameContextData>({
@@ -30,6 +32,8 @@ export const GameContext = createContext<GameContextData>({
   explainMode: false,
   currentChoice: 0,
   setCurrentChoice: () => {},
+  setGameWin: () => {},
+  gameWin: false,
 });
 
 export const GameContextProvider: React.FC<{ children: ReactNode }> = ({
@@ -40,6 +44,7 @@ export const GameContextProvider: React.FC<{ children: ReactNode }> = ({
   const [currentChoice, setCurrentChoice] = useState<number | null>(null);
   const [gameOn, setGameOn] = useState(false);
   const [explainMode, setExplainMode] = useState(false);
+  const [gameWin, setGameWin] = useState(false);
 
   const nextQuestion = () => {
     setExplainMode(false);
@@ -54,6 +59,8 @@ export const GameContextProvider: React.FC<{ children: ReactNode }> = ({
   return (
     <GameContext.Provider
       value={{
+        gameWin,
+        setGameWin,
         currentChoice,
         setCurrentChoice,
         explainMode,

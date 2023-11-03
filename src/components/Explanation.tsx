@@ -11,6 +11,7 @@ export default function Explanation({ explanation }: { explanation: string }) {
     currentLevel,
     setExplainMode,
     setCurrentChoice,
+    setGameWin,
   } = useGame();
 
   const [isCorrect, setIsCorrect] = useState(false);
@@ -35,15 +36,28 @@ export default function Explanation({ explanation }: { explanation: string }) {
         {explanation}
       </div>
       {isChoiceCorrect || isCorrect ? (
-        <button
-          className="bg-purple-900 text-white px-4 py-2 rounded-md hover:bg-purple-950 font-bold"
-          onClick={() => {
-            nextQuestion();
-            setCurrentChoice(null);
-          }}
-        >
-          Next Question
-        </button>
+        currentLevel + 1 === levels.length &&
+        currentQuestion + 1 === levels[currentLevel].questions.length ? (
+          <button
+            className="bg-purple-900 text-white px-4 py-2 rounded-md hover:bg-purple-950 font-bold"
+            onClick={() => {
+              setGameWin(true);
+              setCurrentChoice(null);
+            }}
+          >
+            Finish Game!
+          </button>
+        ) : (
+          <button
+            className="bg-purple-900 text-white px-4 py-2 rounded-md hover:bg-purple-950 font-bold"
+            onClick={() => {
+              nextQuestion();
+              setCurrentChoice(null);
+            }}
+          >
+            Next Question
+          </button>
+        )
       ) : (
         <button
           className="bg-purple-900 text-white px-4 py-2 rounded-md hover:bg-purple-950 font-bold"

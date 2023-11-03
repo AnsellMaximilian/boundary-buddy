@@ -25,13 +25,8 @@ export default function Question({
   question: IQuestion;
   index: number;
 }) {
-  const {
-    nextQuestion,
-    explainMode,
-    setExplainMode,
-    currentChoice,
-    setCurrentChoice,
-  } = useGame();
+  const { explainMode, setExplainMode, currentChoice, setCurrentChoice } =
+    useGame();
   const [explanation, setExplanation] = useState("");
 
   const handleChoose = (index: number) => {
