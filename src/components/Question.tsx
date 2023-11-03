@@ -61,6 +61,7 @@ export default function Question({
             initial="initial"
             animate="animate"
             exit="exit"
+            className="md:max-w-5xl"
           >
             <div className="text-center text-white text-xl font-semibold">
               <div>Question #{index + 1}</div>
