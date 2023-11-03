@@ -28,7 +28,7 @@ export default function GameWin() {
         <img src={buddyForward} />
       </div>
       <div
-        className="text-lg md:text-2xl w-full text-center  tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300"
+        className="md:max-w-5xl md:mx-auto text-lg md:text-2xl w-full text-center  tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300"
         // className="text-2xl w-full text-center text-white font-medium tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300"
       >
         <Typewriter

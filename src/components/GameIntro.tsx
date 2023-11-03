@@ -20,7 +20,7 @@ export default function GameIntro() {
       <div className="text-center animate-bounce mt-16">
         <img src={buddyForward} />
       </div>
-      <div className="text-lg md:text-2xl w-full text-center  tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300">
+      <div className="md:max-w-5xl md:mx-auto text-lg md:text-2xl w-full text-center  tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300">
         <Typewriter
           options={{
             cursor: "",
