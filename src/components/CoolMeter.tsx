@@ -13,7 +13,7 @@ export default function CoolMeter() {
     if (currentLevel >= index) {
       return (
         sum +
-        level.questions.reduce((sum, question, questionIndex) => {
+        level.questions.reduce((sum, _, questionIndex) => {
           if (currentQuestion > questionIndex) {
             return sum + 1;
           } else if (

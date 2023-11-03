@@ -1,11 +1,9 @@
 import { useGame } from "../context/GameContext";
-import { levels } from "../lib/game-values";
 import { Question as IQuestion } from "../lib/types";
 import Choice from "./Choice";
 import { useState } from "react";
 import Explanation from "./Explanation";
 import { AnimatePresence, Variants, motion } from "framer-motion";
-import CoolMeter from "./CoolMeter";
 
 const animationVariants: Variants = {
   initial: {

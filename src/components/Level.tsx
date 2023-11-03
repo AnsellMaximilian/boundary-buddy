@@ -1,9 +1,7 @@
-import { Level as LevelType } from "../lib/types";
 import { useGame } from "../context/GameContext";
 import Question from "./Question";
 import { levels } from "../lib/game-values";
 import { AnimatePresence, Variants, motion } from "framer-motion";
-import CoolMeter from "./CoolMeter";
 
 const containerVariants: Variants = {
   animate: {

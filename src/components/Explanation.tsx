@@ -1,5 +1,4 @@
 import { useGame } from "../context/GameContext";
-import fullLogo from "../assets/full-logo.svg";
 import { levels } from "../lib/game-values";
 import { useEffect, useState } from "react";
 
