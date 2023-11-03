@@ -15,7 +15,7 @@ export default function Choice({
     <button
       disabled={lockChoice}
       onClick={() => handleChoose()}
-      className={`block w-full relative overflow-hidden rounded-md transition-all duration-200 text-white text-xl px-4 py-2 bg-yellow-400 font-semibold ring-offset-2 ${
+      className={`block w-full relative overflow-hidden rounded-md transition-all duration-200 text-white md:text-xl px-4 py-2 bg-yellow-400 font-semibold ring-offset-2 ${
         isChosen
           ? choice.isCorrect
             ? "ring-green-400 ring-4"

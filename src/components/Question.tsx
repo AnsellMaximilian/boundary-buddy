@@ -64,7 +64,7 @@ export default function Question({
           >
             <div className="text-center text-white text-xl font-semibold">
               <div>Question #{index + 1}</div>
-              <h2 className="text-5xl font-medium tracking-tight mb-16">
+              <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-8 md:mb-16">
                 {question.questionText}
               </h2>
             </div>

@@ -54,10 +54,10 @@ export default function Level() {
                 variants={gameVariants}
                 transition={{ delay: 2 }}
               >
-                <h1 className="text-5xl font-bold tracking-tight text-white">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
                   {level.title}
                 </h1>
-                <p className="font-medium text-3xl tracking-tighter text-white">
+                <p className="font-medium text-2xl md:text-3xl tracking-tighter text-white">
                   {level.description}
                 </p>
               </motion.div>

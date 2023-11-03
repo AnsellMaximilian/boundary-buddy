@@ -32,7 +32,7 @@ export default function Explanation({ explanation }: { explanation: string }) {
       <div className="mb-2 text-4xl font-bold tracking-tight text-white">
         {isChoiceCorrect ? "Correct!" : "Incorrect, but that's okay!"}
       </div>
-      <div className="text-5xl text-white tracking-tighter mb-8">
+      <div className="text-2xl md:text-5xl text-white tracking-tighter mb-8">
         {explanation}
       </div>
       {isChoiceCorrect || isCorrect ? (
