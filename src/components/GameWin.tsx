@@ -16,7 +16,11 @@ export default function GameWin() {
   }, []);
 
   return (
-    <div className="grow flex flex-col items-center justify-center p-4 w-full">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="grow flex flex-col items-center justify-center p-4 w-full"
+    >
       <h1 className="text-4xl font-bold text-center text-white">
         Congrats, Cool Kid!
       </h1>
@@ -51,6 +55,6 @@ export default function GameWin() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }
