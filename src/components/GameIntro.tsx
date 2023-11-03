@@ -29,7 +29,7 @@ export default function GameIntro() {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                "Hey there, awesome kid! I'm your pal, Boundary Buddy, and I'm here to drop some knowledge on you. You know what's really cool? It's being true to yourself, speaking up for your personal space, and showing respect for others. That's right, setting your boundaries is not just okay; it's super cool! So, are you ready to join the cool crew and learn how to rock those boundaries while spreading respect like confetti? Let's dive in and make it cooler than ever!"
+                "Hey there, kiddo! I'm your pal, Boundary Buddy, and I'm here to drop some knowledge on you. You know what's really cool? It's being true to yourself, speaking up for your personal space, and showing respect for others. That's right, setting your boundaries is not just okay; it's super cool! So, are you ready to join the cool crew and learn how to rock those boundaries while spreading respect like confetti? Let's dive in and make it cooler than ever!"
               )
               .start();
           }}
