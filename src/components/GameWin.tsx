@@ -23,7 +23,10 @@ export default function GameWin() {
       <div className="text-center animate-bounce mt-16">
         <img src={buddyForward} />
       </div>
-      <div className="text-2xl w-full text-center text-white font-medium tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300">
+      <div
+        className="text-lg md:text-2xl w-full text-center  tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300"
+        // className="text-2xl w-full text-center text-white font-medium tracking-tighter p-4 border-4 rounded-lg shadow-md border-purple-600 bg-purple-300"
+      >
         <Typewriter
           options={{ cursor: "", delay: 50 }}
           onInit={(typewriter) => {
