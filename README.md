@@ -1,27 +1,18 @@
-# React + TypeScript + Vite
+# Boundary Buddy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web quiz game aimed towards children. It's comprised of different lessons, which themselves have a set of questions centered around the theme of their corresponding lessons. The main theme of this quiz is boundaries.
 
-Currently, two official plugins are available:
+Each question of each lesson will have multiple choices. Upon incorrect and correct choices, the user will be given a proper explanation of why a particular choice is incorrect or correct, respectively.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The design is meant to be colorful and fun to stay light in mood while also effectively imparting important lessons to children about boundaries, respect, and vocalizing discomfort.
 
-## Expanding the ESLint configuration
+This app is also very extendible, meaning adding more questions and lessons will be very easy and quick.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![thumbnail](https://github.com/AnsellMaximilian/boundary-buddy/assets/56351143/3d7b3766-69c4-4a88-ab4e-760f18609c64)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+![intro](https://github.com/AnsellMaximilian/boundary-buddy/assets/56351143/12346a05-313a-48e8-aed3-9f70f00ceef7)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![question](https://github.com/AnsellMaximilian/boundary-buddy/assets/56351143/2bd1ad87-a05d-45a0-8aae-d18d8d95c313)
+
+![win](https://github.com/AnsellMaximilian/boundary-buddy/assets/56351143/89b42f2b-6d8f-43a7-a8ed-20e724533382)
