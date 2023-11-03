@@ -3,7 +3,7 @@ import { Level } from "./types";
 export const levels: Level[] = [
   {
     title: "Introduction to Personal Space",
-    description: "An introduction",
+    description: "Respecting Boundaries and Feeling Comfortable",
     questions: [
       {
         questionText: "What is personal space, and why is it important?",
@@ -83,7 +83,7 @@ export const levels: Level[] = [
   },
   {
     title: "Understanding Consent",
-    description: "An introduction",
+    description: "Consent is Cool: Learning to Ask and Respect",
     questions: [
       {
         questionText: "What does it mean to ask for consent?",
@@ -163,7 +163,7 @@ export const levels: Level[] = [
   },
   {
     title: "Identifying Uncomfortable Feelings",
-    description: "An introduction",
+    description: "Speak Up and Stay Safe",
     questions: [
       {
         questionText:
