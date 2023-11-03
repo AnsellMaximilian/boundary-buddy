@@ -12,7 +12,7 @@ function App() {
   return (
     <main
       style={{ background: `url("${bg}")` }}
-      className="h-screen bg-purple-400 bg-graddient-to-r from-purple-600 via-pink-300 to-purple-600 flex flex-col items-center justify-center"
+      className="bg-contain h-screen bg-purple-400 bg-graddient-to-r from-purple-600 via-pink-300 to-purple-600 flex flex-col items-center justify-center"
     >
       {gameWin ? (
         <GameWin />
