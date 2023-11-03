@@ -35,9 +35,7 @@ export default function Question({
     setExplanation(question.choices[index].explanation);
     setTimeout(() => {
       // Set explanation mode
-      setTimeout(() => {
-        setExplainMode(true);
-      }, 1000);
+      setExplainMode(true);
     }, 1000);
   };
 
