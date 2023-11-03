@@ -12,4 +12,5 @@ export type Question = {
 export type Choice = {
   choiceText: string;
   isCorrect: boolean;
+  explanation: string;
 };
