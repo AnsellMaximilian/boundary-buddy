@@ -1,6 +1,7 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
 import { Level } from "../lib/types";
 import { levels } from "../lib/game-values";
+import BgMusic from "../components/BgMusic";
 
 export interface GameContextData {
   levels: Level[];
@@ -76,6 +77,7 @@ export const GameContextProvider: React.FC<{ children: ReactNode }> = ({
       }}
     >
       {children}
+      <BgMusic />
     </GameContext.Provider>
   );
 };
