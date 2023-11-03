@@ -12,7 +12,7 @@ export default function Game({ levels }: { levels: LevelType[] }) {
       initial={{ opacity: 0 }}
       className="grow flex flex-col p-4"
     >
-      <Level level={levels[currentLevel]} />
+      <Level />
     </motion.div>
   );
 }

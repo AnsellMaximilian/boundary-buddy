@@ -2,49 +2,76 @@ import { Level as LevelType } from "../lib/types";
 import { useGame } from "../context/GameContext";
 import Question from "./Question";
 import { levels } from "../lib/game-values";
-import { Variants, motion } from "framer-motion";
+import { AnimatePresence, Variants, motion } from "framer-motion";
 
-type Props = {
-  level: LevelType;
+const containerVariants: Variants = {
+  animate: {
+    transition: {
+      when: "beforeChildren",
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
 };
 
 const gameVariants: Variants = {
-  levelInitial: {
+  initial: {
     y: "-50%",
     top: "50%",
   },
-  levelEnd: { y: 0, top: 0 },
+  animate: { y: 0, top: 0 },
 };
 
-export default function Level({ level }: Props) {
+const questionVariants: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: { delay: 2.2 },
+  },
+};
+
+export default function Level() {
   const { currentLevel, currentQuestion } = useGame();
   return (
-    <div className="grow flex flex-col relative">
-      <motion.div
-        className="text-center relative"
-        variants={gameVariants}
-        initial="levelInitial"
-        animate="levelEnd"
-        transition={{ delay: 2 }}
-      >
-        <h1 className="text-5xl font-bold tracking-tight text-white">
-          {level.title}
-        </h1>
-        <p className="font-medium text-3xl tracking-tighter text-white">
-          {level.description}
-        </p>
-      </motion.div>
-      <motion.div
-        className="grow flex flex-col items-center justify-center "
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.2 }}
-      >
-        <Question
-          question={levels[currentLevel].questions[currentQuestion]}
-          index={currentQuestion}
-        />
-      </motion.div>
-    </div>
+    <AnimatePresence mode="wait">
+      {levels.map(
+        (level, index) =>
+          index === currentLevel && (
+            <motion.div
+              key={level.title + index + level.description}
+              className="grow flex flex-col relative"
+              variants={containerVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              <motion.div
+                className="text-center relative"
+                variants={gameVariants}
+                transition={{ delay: 2 }}
+              >
+                <h1 className="text-5xl font-bold tracking-tight text-white">
+                  {level.title}
+                </h1>
+                <p className="font-medium text-3xl tracking-tighter text-white">
+                  {level.description}
+                </p>
+              </motion.div>
+              <motion.div
+                className="grow flex flex-col items-center justify-center "
+                variants={questionVariants}
+              >
+                <Question
+                  question={levels[currentLevel].questions[currentQuestion]}
+                  index={currentQuestion}
+                />
+              </motion.div>
+            </motion.div>
+          )
+      )}
+    </AnimatePresence>
   );
 }

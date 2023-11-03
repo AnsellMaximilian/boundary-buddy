@@ -202,7 +202,8 @@ export const levels: Level[] = [
           {
             choiceText: "By trusting your feelings and instincts",
             isCorrect: true,
-            explanation: "",
+            explanation:
+              "Your feelings and instincts are like your body's own little alarms. When someone gets too close and invades your personal space, you might start feeling a bit uncomfortable. Trusting these feelings and instincts helps you understand when your personal space is being invaded. So, this answer is like your personal space superhero guide!",
           },
           {
             choiceText: "By ignoring your feelings",
