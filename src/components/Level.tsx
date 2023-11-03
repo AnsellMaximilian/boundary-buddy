@@ -3,6 +3,7 @@ import { useGame } from "../context/GameContext";
 import Question from "./Question";
 import { levels } from "../lib/game-values";
 import { AnimatePresence, Variants, motion } from "framer-motion";
+import CoolMeter from "./CoolMeter";
 
 const containerVariants: Variants = {
   animate: {
@@ -68,6 +69,7 @@ export default function Level() {
                   question={levels[currentLevel].questions[currentQuestion]}
                   index={currentQuestion}
                 />
+                {/* <CoolMeter /> */}
               </motion.div>
             </motion.div>
           )

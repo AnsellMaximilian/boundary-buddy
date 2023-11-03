@@ -5,6 +5,7 @@ import Choice from "./Choice";
 import { useState } from "react";
 import Explanation from "./Explanation";
 import { AnimatePresence, Variants, motion } from "framer-motion";
+import CoolMeter from "./CoolMeter";
 
 const animationVariants: Variants = {
   initial: {
@@ -41,7 +42,7 @@ export default function Question({
   };
 
   return (
-    <div>
+    <div className="">
       <AnimatePresence mode="wait">
         {explainMode ? (
           <motion.div
